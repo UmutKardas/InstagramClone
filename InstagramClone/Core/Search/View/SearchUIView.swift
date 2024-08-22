@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct SearchUIView: View {
+    @State var searchText: String = ""
+
     var body: some View {
-        Text("Search")
+        NavigationStack {
+            ScrollView {
+                if searchText.isEmpty {
+                    SearchDefaultUIView()
+                }
+                else {
+                    SearchResultUIView()
+                }
+            }.searchable(text: $searchText, prompt: "Search")
+        }
     }
 }
 

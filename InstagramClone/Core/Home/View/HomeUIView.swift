@@ -24,7 +24,6 @@ struct HomeUIView: View {
                     }
                 }
             }
-
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {

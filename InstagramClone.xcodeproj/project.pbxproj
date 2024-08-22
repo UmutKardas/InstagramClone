@@ -27,6 +27,17 @@
 		8A2196BC2C723DC7001B4236 /* PostCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2196BB2C723DC7001B4236 /* PostCellUIView.swift */; };
 		8A2196C02C7241BC001B4236 /* PostActionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2196BF2C7241BC001B4236 /* PostActionUIView.swift */; };
 		8A2196C22C7248A9001B4236 /* StoryCellUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2196C12C7248A9001B4236 /* StoryCellUIView.swift */; };
+		8A5D6AC52C77B25D00D6966D /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6AC42C77B25D00D6966D /* LoginUIView.swift */; };
+		8A5D6ACC2C77C11700D6966D /* AddYourEmailUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6ACB2C77C11700D6966D /* AddYourEmailUIView.swift */; };
+		8A5D6ACE2C77C2DF00D6966D /* CreatePasswordUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6ACD2C77C2DF00D6966D /* CreatePasswordUIView.swift */; };
+		8A5D6AD02C77C31700D6966D /* CreateUsernameUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6ACF2C77C31700D6966D /* CreateUsernameUIView.swift */; };
+		8A5D6AD22C77C5D000D6966D /* SignUpCompleteUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6AD12C77C5D000D6966D /* SignUpCompleteUIView.swift */; };
+		8A9C77D42C7676EF002ACC18 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D32C7676EF002ACC18 /* Reel.swift */; };
+		8A9C77D62C767747002ACC18 /* ReelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D52C767747002ACC18 /* ReelCell.swift */; };
+		8A9C77D92C767F40002ACC18 /* ReelItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D82C767F40002ACC18 /* ReelItemUIView.swift */; };
+		8A9D695C2C72879100704814 /* SearchResultUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D695B2C72879100704814 /* SearchResultUIView.swift */; };
+		8A9D695F2C728A5800704814 /* SearchDefaultUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D695E2C728A5800704814 /* SearchDefaultUIView.swift */; };
+		8A9D69632C72A23200704814 /* UploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D69622C72A23200704814 /* UploadViewModel.swift */; };
 		98A9416860909F0D0758839B /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEAAC6227CC8E6F032697F7 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +85,18 @@
 		8A2196BB2C723DC7001B4236 /* PostCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellUIView.swift; sourceTree = "<group>"; };
 		8A2196BF2C7241BC001B4236 /* PostActionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionUIView.swift; sourceTree = "<group>"; };
 		8A2196C12C7248A9001B4236 /* StoryCellUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCellUIView.swift; sourceTree = "<group>"; };
+		8A5D6AC42C77B25D00D6966D /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
+		8A5D6ACB2C77C11700D6966D /* AddYourEmailUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYourEmailUIView.swift; sourceTree = "<group>"; };
+		8A5D6ACD2C77C2DF00D6966D /* CreatePasswordUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordUIView.swift; sourceTree = "<group>"; };
+		8A5D6ACF2C77C31700D6966D /* CreateUsernameUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameUIView.swift; sourceTree = "<group>"; };
+		8A5D6AD12C77C5D000D6966D /* SignUpCompleteUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteUIView.swift; sourceTree = "<group>"; };
+		8A9C77D22C767378002ACC18 /* dummyVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyVideo.mp4; sourceTree = "<group>"; };
+		8A9C77D32C7676EF002ACC18 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
+		8A9C77D52C767747002ACC18 /* ReelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelCell.swift; sourceTree = "<group>"; };
+		8A9C77D82C767F40002ACC18 /* ReelItemUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelItemUIView.swift; sourceTree = "<group>"; };
+		8A9D695B2C72879100704814 /* SearchResultUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUIView.swift; sourceTree = "<group>"; };
+		8A9D695E2C728A5800704814 /* SearchDefaultUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDefaultUIView.swift; sourceTree = "<group>"; };
+		8A9D69622C72A23200704814 /* UploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewModel.swift; sourceTree = "<group>"; };
 		D21749654268BE24867719C1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 		E78ABAE9A63F127AFAA6F948 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		F79D52DDC3B22F8F2CB2F322 /* Pods_InstagramClone_InstagramCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone_InstagramCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +228,7 @@
 		8A09177C2C72121A0030AC06 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8A5D6AC62C77C0AA00D6966D /* Authentication */,
 				8A09177F2C7212520030AC06 /* MainTabBar */,
 				8A0917802C7213150030AC06 /* Home */,
 				8A0917812C72131F0030AC06 /* Search */,
@@ -225,6 +249,7 @@
 		8A09177E2C72123C0030AC06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C77D32C7676EF002ACC18 /* Reel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +282,7 @@
 		8A0917822C72132D0030AC06 /* Reels */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C77D72C767F27002ACC18 /* Components */,
 				8A0917932C721B2E0030AC06 /* View */,
 			);
 			path = Reels;
@@ -281,6 +307,7 @@
 		8A0917852C72144D0030AC06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A9C77D22C767378002ACC18 /* dummyVideo.mp4 */,
 				8A0917552C720E030030AC06 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -289,6 +316,7 @@
 		8A0917862C7214A50030AC06 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
+				8A9D69612C72A21E00704814 /* ViewModel */,
 				8A0917902C721B110030AC06 /* View */,
 			);
 			path = Upload;
@@ -315,6 +343,8 @@
 		8A09178D2C721AF70030AC06 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8A9D695B2C72879100704814 /* SearchResultUIView.swift */,
+				8A9D695E2C728A5800704814 /* SearchDefaultUIView.swift */,
 				8A09178E2C721B040030AC06 /* SearchUIView.swift */,
 			);
 			path = View;
@@ -332,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0917942C721B3A0030AC06 /* ReelsUIView.swift */,
+				8A9C77D52C767747002ACC18 /* ReelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,6 +389,66 @@
 				8A2196BF2C7241BC001B4236 /* PostActionUIView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		8A5D6AC22C77B24200D6966D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6AC32C77B24D00D6966D /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8A5D6AC32C77B24D00D6966D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6AC42C77B25D00D6966D /* LoginUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A5D6AC62C77C0AA00D6966D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6AC22C77B24200D6966D /* Login */,
+				8A5D6AC72C77C0D000D6966D /* Register */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8A5D6AC72C77C0D000D6966D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6AC82C77C0E100D6966D /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8A5D6AC82C77C0E100D6966D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6ACB2C77C11700D6966D /* AddYourEmailUIView.swift */,
+				8A5D6ACF2C77C31700D6966D /* CreateUsernameUIView.swift */,
+				8A5D6ACD2C77C2DF00D6966D /* CreatePasswordUIView.swift */,
+				8A5D6AD12C77C5D000D6966D /* SignUpCompleteUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8A9C77D72C767F27002ACC18 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C77D82C767F40002ACC18 /* ReelItemUIView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8A9D69612C72A21E00704814 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A9D69622C72A23200704814 /* UploadViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,15 +692,26 @@
 			files = (
 				8A0917982C721B4C0030AC06 /* ProfileUIView.swift in Sources */,
 				8A0917542C720E020030AC06 /* ContentView.swift in Sources */,
+				8A5D6ACC2C77C11700D6966D /* AddYourEmailUIView.swift in Sources */,
 				8A2196C02C7241BC001B4236 /* PostActionUIView.swift in Sources */,
+				8A5D6AD22C77C5D000D6966D /* SignUpCompleteUIView.swift in Sources */,
 				8A0917922C721B1D0030AC06 /* UploadUIView.swift in Sources */,
+				8A9D695F2C728A5800704814 /* SearchDefaultUIView.swift in Sources */,
+				8A5D6ACE2C77C2DF00D6966D /* CreatePasswordUIView.swift in Sources */,
+				8A9D695C2C72879100704814 /* SearchResultUIView.swift in Sources */,
 				8A09179B2C7227190030AC06 /* UserStatUIView.swift in Sources */,
 				8A0917952C721B3A0030AC06 /* ReelsUIView.swift in Sources */,
 				8A2196C22C7248A9001B4236 /* StoryCellUIView.swift in Sources */,
 				8A09178C2C7219200030AC06 /* HomeUIView.swift in Sources */,
 				8A2196BC2C723DC7001B4236 /* PostCellUIView.swift in Sources */,
+				8A9C77D62C767747002ACC18 /* ReelCell.swift in Sources */,
 				8A09178F2C721B040030AC06 /* SearchUIView.swift in Sources */,
 				8A0917892C7215060030AC06 /* MainTabBarView.swift in Sources */,
+				8A9C77D42C7676EF002ACC18 /* Reel.swift in Sources */,
+				8A9C77D92C767F40002ACC18 /* ReelItemUIView.swift in Sources */,
+				8A5D6AC52C77B25D00D6966D /* LoginUIView.swift in Sources */,
+				8A9D69632C72A23200704814 /* UploadViewModel.swift in Sources */,
+				8A5D6AD02C77C31700D6966D /* CreateUsernameUIView.swift in Sources */,
 				8A0917522C720E020030AC06 /* InstagramCloneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

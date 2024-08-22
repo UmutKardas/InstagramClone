@@ -59,7 +59,7 @@ struct ProfileUIView: View {
 
                     // Posts
                     LazyVGrid(columns: gridItems, spacing: 1, content: {
-                        ForEach(0 ... 2, id: \.self) { _ in
+                        ForEach(0 ... 15, id: \.self) { _ in
                             Color(.gray)
                                 .scaledToFill()
                         }
