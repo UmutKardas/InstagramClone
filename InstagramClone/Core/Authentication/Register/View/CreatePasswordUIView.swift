@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreatePasswordUIView: View {
-    @State private var password: String = ""
+    @EnvironmentObject var viewModel: RegisterViewModel
     @State private var passwordAgain: String = ""
 
     var body: some View {
@@ -26,7 +26,7 @@ struct CreatePasswordUIView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
 
-                TextField("Enter your password", text: $password)
+                SecureField("Enter your password", text: $viewModel.password)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
@@ -34,7 +34,7 @@ struct CreatePasswordUIView: View {
                     .padding(.horizontal, 24)
                     .autocapitalization(.none)
 
-                TextField("Enter your password Again", text: $passwordAgain)
+                SecureField("Enter your password Again", text: $passwordAgain)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
@@ -44,6 +44,8 @@ struct CreatePasswordUIView: View {
 
                 NavigationLink {
                     SignUpCompleteUIView()
+                        .environmentObject(viewModel)
+                        .navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Login")
                         .font(.subheadline)
@@ -60,10 +62,11 @@ struct CreatePasswordUIView: View {
     }
 
     private func isDisabled() -> Bool {
-        return password != passwordAgain || password.isEmpty
+        return viewModel.password != passwordAgain || viewModel.password.isEmpty
     }
 }
 
 #Preview {
     CreatePasswordUIView()
+        .environmentObject(RegisterViewModel())
 }

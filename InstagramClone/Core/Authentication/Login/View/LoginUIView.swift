@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginUIView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @StateObject private var viewModel = LoginViewModel()
+    @State private var isPresentAlert = false
 
     var body: some View {
         NavigationStack {
@@ -21,15 +21,18 @@ struct LoginUIView: View {
                 .frame(width: 220, height: 100)
 
             VStack {
-                TextField("Enter your email", text: $email)
+                TextField("Enter your email", text: $viewModel.email)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
                     .cornerRadius(10)
                     .padding(.horizontal, 24)
                     .autocapitalization(.none)
+                    .keyboardType(.default)
+                    .textContentType(.emailAddress)
+                    .disableAutocorrection(true)
 
-                TextField("Enter your password", text: $password)
+                SecureField("Enter your password", text: $viewModel.password)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
@@ -38,7 +41,14 @@ struct LoginUIView: View {
             }
 
             Button {
-                print("Login")
+                Task {
+                    await viewModel.login()
+                    DispatchQueue.main.async {
+                        if !viewModel.error.isEmpty {
+                            isPresentAlert.toggle()
+                        }
+                    }
+                }
             } label: {
                 Text("Login")
                     .font(.subheadline)
@@ -90,6 +100,7 @@ struct LoginUIView: View {
             NavigationLink {
                 AddYourEmailUIView()
                     .navigationBarBackButtonHidden(true)
+                    .environmentObject(RegisterViewModel())
 
             } label: {
                 HStack {
@@ -101,6 +112,9 @@ struct LoginUIView: View {
                         .fontWeight(.semibold)
                 }
             }.padding(.bottom, 20)
+                .alert(isPresented: $isPresentAlert, content: {
+                    Alert(title: Text("Error"), message: Text(viewModel.error), dismissButton: .default(Text("OK")))
+                })
         }
     }
 }

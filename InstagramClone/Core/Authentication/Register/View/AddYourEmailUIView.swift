@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddYourEmailUIView: View {
-    @State private var email: String = ""
+    @EnvironmentObject var viewModel: RegisterViewModel
 
     var body: some View {
         NavigationStack {
@@ -25,7 +25,7 @@ struct AddYourEmailUIView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
 
-                TextField("Enter your email", text: $email)
+                TextField("Enter your email", text: $viewModel.email)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
@@ -35,6 +35,7 @@ struct AddYourEmailUIView: View {
 
                 NavigationLink {
                     CreateUsernameUIView()
+                        .environmentObject(viewModel)
                 } label: {
                     Text("Login")
                         .font(.subheadline)
@@ -53,4 +54,5 @@ struct AddYourEmailUIView: View {
 
 #Preview {
     AddYourEmailUIView()
+        .environmentObject(RegisterViewModel())
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreateUsernameUIView: View {
-    @State private var username: String = ""
+    @EnvironmentObject var viewModel: RegisterViewModel
 
     var body: some View {
         NavigationStack {
@@ -25,7 +25,7 @@ struct CreateUsernameUIView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
 
-                TextField("Enter your username", text: $username)
+                TextField("Enter your username", text: $viewModel.username)
                     .padding(12)
                     .background(Color(.systemGray6))
                     .font(.subheadline)
@@ -35,6 +35,8 @@ struct CreateUsernameUIView: View {
 
                 NavigationLink {
                     CreatePasswordUIView()
+                        .environmentObject(viewModel)
+
                 } label: {
                     Text("Login")
                         .font(.subheadline)
@@ -53,4 +55,5 @@ struct CreateUsernameUIView: View {
 
 #Preview {
     CreateUsernameUIView()
+        .environmentObject(RegisterViewModel())
 }

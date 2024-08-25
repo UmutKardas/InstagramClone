@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct SignUpCompleteUIView: View {
+    @EnvironmentObject var viewModel: RegisterViewModel
+    @State var isPresentAlert: Bool = false
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 12) {
-                Text("Welcome to Instagram, umtkardas")
+                Text("Welcome to Instagram, \(viewModel.username)")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundStyle(Color.buttonText)
@@ -26,7 +29,17 @@ struct SignUpCompleteUIView: View {
                     .lineLimit(1)
                     .padding(.horizontal, 24)
 
-                NavigationLink {} label: {
+                Button {
+                    Task {
+                        await viewModel.register()
+
+                        DispatchQueue.main.async {
+                            if !viewModel.error.isEmpty {
+                                isPresentAlert.toggle()
+                            }
+                        }
+                    }
+                } label: {
                     Text("Complete Sign Up")
                         .font(.subheadline)
                         .fontWeight(.semibold)
@@ -37,6 +50,8 @@ struct SignUpCompleteUIView: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         }
                 }
+            }.alert(isPresented: $isPresentAlert) {
+                Alert(title: Text("Error"), message: Text(viewModel.error), dismissButton: .default(Text("OK")))
             }
         }
     }
@@ -44,4 +59,5 @@ struct SignUpCompleteUIView: View {
 
 #Preview {
     SignUpCompleteUIView()
+        .environmentObject(RegisterViewModel())
 }

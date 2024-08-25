@@ -1,0 +1,26 @@
+//
+//  AppUser.swift
+//  InstagramClone
+//
+//  Created by Hüseyin Umut Kardaş on 25.08.2024.
+//
+
+import Foundation
+
+struct AppUser: Identifiable, Encodable, Decodable {
+    var id: String
+    var username: String
+    var email: String
+    var profilePictureUrl: String
+    var fullname: String
+    var biography: String
+
+    init(id: String, username: String, email: String) {
+        self.id = id
+        self.username = username
+        self.email = email
+        self.profilePictureUrl = ""
+        self.fullname = ""
+        self.biography = ""
+    }
+}
