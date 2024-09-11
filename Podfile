@@ -8,7 +8,7 @@ target 'InstagramClone' do
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
 	pod 'FirebaseStorage'
-        pod 'SDWebImage'
+        pod 'SDWebImageSwiftUI'
   # Pods for InstagramClone
 
   target 'InstagramCloneTests' do

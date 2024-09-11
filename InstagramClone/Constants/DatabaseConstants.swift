@@ -9,4 +9,6 @@ import Foundation
 
 enum DatabaseConstants {
     static let COLLECTION_USERS = "users"
+    static let COLLECTION_STORIES = "stories"
+    static let COLLECTION_POSTS = "posts"
 }

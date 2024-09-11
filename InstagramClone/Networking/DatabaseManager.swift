@@ -36,4 +36,31 @@ class DatabaseManager {
             throw NSError(domain: "FirestoreDataError", code: 3, userInfo: [NSLocalizedDescriptionKey: "Failed to update user data in Firestore"])
         }
     }
+
+    func collectionsUsers(get id: String) async throws -> AppUser? {
+        return try await service.collection(DatabaseConstants.COLLECTION_USERS).document(id).getDocument().data(as: AppUser.self)
+    }
+
+    func collectionsStories(get id: String) async throws -> Story? {
+        return try await service.collection(DatabaseConstants.COLLECTION_STORIES).document(id).getDocument().data(as: Story.self)
+    }
+
+    func collectionsPosts(get id: String) async throws -> Post? {
+        return try await service.collection(DatabaseConstants.COLLECTION_POSTS).document(id).getDocument().data(as: Post.self)
+    }
+
+    func collectionsPost(upload post: Post) async throws {
+        let encodedPost: [String: Any]
+        do {
+            encodedPost = try Firestore.Encoder().encode(post)
+        } catch {
+            throw NSError(domain: "FirestoreEncodingError", code: 4, userInfo: [NSLocalizedDescriptionKey: "Failed to encode post data"])
+        }
+
+        do {
+            try await service.collection(DatabaseConstants.COLLECTION_POSTS).document(post.id).setData(encodedPost)
+        } catch let firestoreError as NSError {
+            throw NSError(domain: "FirestoreDataError", code: firestoreError.code, userInfo: [NSLocalizedDescriptionKey: firestoreError.localizedDescription])
+        }
+    }
 }

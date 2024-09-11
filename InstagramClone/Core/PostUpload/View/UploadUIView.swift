@@ -32,29 +32,22 @@ struct UploadUIView: View {
             .padding(.leading, 10)
             .navigationTitle("New Post")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: { toolbarContent })
+            .toolbar(content: {
+                UploadToolBar {
+                    viewModel.resetViewModel()
+                    caption = ""
+                    selectionIndex = 0
+                } uploadAction: {
+                    Task {
+                        await viewModel.uploadPost(caption: caption)
+                    }
+                }
+
+            })
             .onAppear {
                 isPresented.toggle()
             }
             .photosPicker(isPresented: $isPresented, selection: $viewModel.selectedItem)
-        }
-    }
-
-    private var toolbarContent: some ToolbarContent {
-        Group {
-            ToolbarItem(placement: .topBarLeading) {
-                Button("Cancel") {
-                    viewModel.resetViewModel()
-                    caption = ""
-                    selectionIndex = 0
-                }
-            }
-
-            ToolbarItem(placement: .topBarTrailing) {
-                Button("Upload") {
-                    print("Upload")
-                }
-            }
         }
     }
 }

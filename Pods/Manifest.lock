@@ -1370,13 +1370,15 @@ PODS:
   - SDWebImage (5.19.6):
     - SDWebImage/Core (= 5.19.6)
   - SDWebImage/Core (5.19.6)
+  - SDWebImageSwiftUI (3.1.1):
+    - SDWebImage (~> 5.10)
 
 DEPENDENCIES:
   - FirebaseAnalytics
   - FirebaseAuth
   - FirebaseFirestore
   - FirebaseStorage
-  - SDWebImage
+  - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
@@ -1404,6 +1406,7 @@ SPEC REPOS:
     - PromisesObjC
     - RecaptchaInterop
     - SDWebImage
+    - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   abseil: d121da9ef7e2ff4cab7666e76c5a3e0915ae08c3
@@ -1430,7 +1433,8 @@ SPEC CHECKSUMS:
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: a79252b60f4678812d94316c91da69ec83089c9f
+  SDWebImageSwiftUI: dcff3d05fd0579ff280221ae8856c34ac3b67f25
 
-PODFILE CHECKSUM: 8566db53b472d2744d9170bfca08f74538afeff4
+PODFILE CHECKSUM: 0b4229438cbfaa87ae6983cb94c84ac7253085ec
 
 COCOAPODS: 1.15.2

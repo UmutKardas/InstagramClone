@@ -40,12 +40,22 @@
 		8A5D6ACE2C77C2DF00D6966D /* CreatePasswordUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6ACD2C77C2DF00D6966D /* CreatePasswordUIView.swift */; };
 		8A5D6AD02C77C31700D6966D /* CreateUsernameUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6ACF2C77C31700D6966D /* CreateUsernameUIView.swift */; };
 		8A5D6AD22C77C5D000D6966D /* SignUpCompleteUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6AD12C77C5D000D6966D /* SignUpCompleteUIView.swift */; };
+		8A6A95B22C7FAB1B009C00EE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A95B12C7FAB1B009C00EE /* Post.swift */; };
+		8A6A95B52C7FAEDE009C00EE /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A95B42C7FAEDE009C00EE /* Date+Extensions.swift */; };
+		8A6A95B72C7FB4D0009C00EE /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A95B62C7FB4D0009C00EE /* PostViewModel.swift */; };
+		8A6A95BA2C7FB51F009C00EE /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A95B92C7FB51F009C00EE /* Story.swift */; };
+		8A6A95BC2C7FBBAD009C00EE /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A95BB2C7FBBAD009C00EE /* StoryViewModel.swift */; };
 		8A9C77D42C7676EF002ACC18 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D32C7676EF002ACC18 /* Reel.swift */; };
 		8A9C77D62C767747002ACC18 /* ReelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D52C767747002ACC18 /* ReelCell.swift */; };
 		8A9C77D92C767F40002ACC18 /* ReelItemUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C77D82C767F40002ACC18 /* ReelItemUIView.swift */; };
 		8A9D695C2C72879100704814 /* SearchResultUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D695B2C72879100704814 /* SearchResultUIView.swift */; };
 		8A9D695F2C728A5800704814 /* SearchDefaultUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D695E2C728A5800704814 /* SearchDefaultUIView.swift */; };
 		8A9D69632C72A23200704814 /* UploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D69622C72A23200704814 /* UploadViewModel.swift */; };
+		8ADC8A172C921F5D00093506 /* StoriesUploadUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC8A162C921F5D00093506 /* StoriesUploadUIView.swift */; };
+		8ADC8A192C921F6900093506 /* StoriesUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC8A182C921F6900093506 /* StoriesUIView.swift */; };
+		8ADC8A1B2C92236E00093506 /* UploadToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC8A1A2C92236E00093506 /* UploadToolBar.swift */; };
+		8ADC8A1D2C9233DB00093506 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC8A1C2C9233DB00093506 /* StorageManager.swift */; };
+		8AF6D41F2C7E5D510008314A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6D41E2C7E5D510008314A /* HomeViewModel.swift */; };
 		98A9416860909F0D0758839B /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FEAAC6227CC8E6F032697F7 /* Pods_InstagramClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +116,11 @@
 		8A5D6ACD2C77C2DF00D6966D /* CreatePasswordUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordUIView.swift; sourceTree = "<group>"; };
 		8A5D6ACF2C77C31700D6966D /* CreateUsernameUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameUIView.swift; sourceTree = "<group>"; };
 		8A5D6AD12C77C5D000D6966D /* SignUpCompleteUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCompleteUIView.swift; sourceTree = "<group>"; };
+		8A6A95B12C7FAB1B009C00EE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8A6A95B42C7FAEDE009C00EE /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		8A6A95B62C7FB4D0009C00EE /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		8A6A95B92C7FB51F009C00EE /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		8A6A95BB2C7FBBAD009C00EE /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		8A9C77D22C767378002ACC18 /* dummyVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dummyVideo.mp4; sourceTree = "<group>"; };
 		8A9C77D32C7676EF002ACC18 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		8A9C77D52C767747002ACC18 /* ReelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelCell.swift; sourceTree = "<group>"; };
@@ -113,6 +128,11 @@
 		8A9D695B2C72879100704814 /* SearchResultUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultUIView.swift; sourceTree = "<group>"; };
 		8A9D695E2C728A5800704814 /* SearchDefaultUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDefaultUIView.swift; sourceTree = "<group>"; };
 		8A9D69622C72A23200704814 /* UploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewModel.swift; sourceTree = "<group>"; };
+		8ADC8A162C921F5D00093506 /* StoriesUploadUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesUploadUIView.swift; sourceTree = "<group>"; };
+		8ADC8A182C921F6900093506 /* StoriesUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesUIView.swift; sourceTree = "<group>"; };
+		8ADC8A1A2C92236E00093506 /* UploadToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadToolBar.swift; sourceTree = "<group>"; };
+		8ADC8A1C2C9233DB00093506 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		8AF6D41E2C7E5D510008314A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D21749654268BE24867719C1 /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 		E78ABAE9A63F127AFAA6F948 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		F79D52DDC3B22F8F2CB2F322 /* Pods_InstagramClone_InstagramCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone_InstagramCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +215,7 @@
 		8A0917502C720E020030AC06 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				8A6A95B32C7FADE7009C00EE /* Utils */,
 				8A0917842C7214190030AC06 /* Constants */,
 				8A09177B2C7212140030AC06 /* Networking */,
 				8A09177C2C72121A0030AC06 /* Core */,
@@ -239,6 +260,7 @@
 			children = (
 				8A19BDD62C7B428C007127C1 /* AuthManager.swift */,
 				8A2894552C7B6033009B271D /* DatabaseManager.swift */,
+				8ADC8A1C2C9233DB00093506 /* StorageManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -246,12 +268,14 @@
 		8A09177C2C72121A0030AC06 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8ADC8A132C921F3100093506 /* StoriesUpload */,
+				8ADC8A122C921F2200093506 /* Stories */,
 				8A19BDD02C7B4239007127C1 /* Root */,
 				8A5D6AC62C77C0AA00D6966D /* Authentication */,
 				8A09177F2C7212520030AC06 /* MainTabBar */,
 				8A0917802C7213150030AC06 /* Home */,
 				8A0917812C72131F0030AC06 /* Search */,
-				8A0917862C7214A50030AC06 /* Upload */,
+				8A0917862C7214A50030AC06 /* PostUpload */,
 				8A0917822C72132D0030AC06 /* Reels */,
 				8A0917832C72133A0030AC06 /* Profile */,
 			);
@@ -261,6 +285,7 @@
 		8A09177D2C7212210030AC06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8A6A95B42C7FAEDE009C00EE /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +295,8 @@
 			children = (
 				8A9C77D32C7676EF002ACC18 /* Reel.swift */,
 				8A2894572C7B61BC009B271D /* AppUser.swift */,
+				8A6A95B12C7FAB1B009C00EE /* Post.swift */,
+				8A6A95B92C7FB51F009C00EE /* Story.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +312,7 @@
 		8A0917802C7213150030AC06 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8AF6D41D2C7E5D320008314A /* ViewModel */,
 				8A2196BD2C72417B001B4236 /* Components */,
 				8A09178A2C7219120030AC06 /* View */,
 			);
@@ -334,13 +362,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8A0917862C7214A50030AC06 /* Upload */ = {
+		8A0917862C7214A50030AC06 /* PostUpload */ = {
 			isa = PBXGroup;
 			children = (
 				8A9D69612C72A21E00704814 /* ViewModel */,
 				8A0917902C721B110030AC06 /* View */,
 			);
-			path = Upload;
+			path = PostUpload;
 			sourceTree = "<group>";
 		};
 		8A0917872C7214C10030AC06 /* View */ = {
@@ -375,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0917912C721B1D0030AC06 /* UploadUIView.swift */,
+				8ADC8A1A2C92236E00093506 /* UploadToolBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +544,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8A6A95B32C7FADE7009C00EE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8A9C77D72C767F27002ACC18 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +563,48 @@
 			isa = PBXGroup;
 			children = (
 				8A9D69622C72A23200704814 /* UploadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8ADC8A122C921F2200093506 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC8A152C921F4800093506 /* View */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		8ADC8A132C921F3100093506 /* StoriesUpload */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC8A142C921F4400093506 /* View */,
+			);
+			path = StoriesUpload;
+			sourceTree = "<group>";
+		};
+		8ADC8A142C921F4400093506 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC8A162C921F5D00093506 /* StoriesUploadUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8ADC8A152C921F4800093506 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8ADC8A182C921F6900093506 /* StoriesUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AF6D41D2C7E5D320008314A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8AF6D41E2C7E5D510008314A /* HomeViewModel.swift */,
+				8A6A95B62C7FB4D0009C00EE /* PostViewModel.swift */,
+				8A6A95BB2C7FBBAD009C00EE /* StoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -773,7 +851,9 @@
 				8A0917982C721B4C0030AC06 /* ProfileUIView.swift in Sources */,
 				8A0917542C720E020030AC06 /* ContentView.swift in Sources */,
 				8A5D6ACC2C77C11700D6966D /* AddYourEmailUIView.swift in Sources */,
+				8AF6D41F2C7E5D510008314A /* HomeViewModel.swift in Sources */,
 				8A2196C02C7241BC001B4236 /* PostActionUIView.swift in Sources */,
+				8ADC8A172C921F5D00093506 /* StoriesUploadUIView.swift in Sources */,
 				8A5D6AD22C77C5D000D6966D /* SignUpCompleteUIView.swift in Sources */,
 				8A0917922C721B1D0030AC06 /* UploadUIView.swift in Sources */,
 				8A9D695F2C728A5800704814 /* SearchDefaultUIView.swift in Sources */,
@@ -781,26 +861,34 @@
 				8A2894582C7B61BC009B271D /* AppUser.swift in Sources */,
 				8A2894562C7B6033009B271D /* DatabaseManager.swift in Sources */,
 				8A19BDD92C7B467D007127C1 /* LoginViewModel.swift in Sources */,
+				8A6A95B52C7FAEDE009C00EE /* Date+Extensions.swift in Sources */,
+				8A6A95B22C7FAB1B009C00EE /* Post.swift in Sources */,
 				8A5D6ACE2C77C2DF00D6966D /* CreatePasswordUIView.swift in Sources */,
+				8A6A95B72C7FB4D0009C00EE /* PostViewModel.swift in Sources */,
 				8A19BDD42C7B425F007127C1 /* ContentViewModel.swift in Sources */,
 				8A9D695C2C72879100704814 /* SearchResultUIView.swift in Sources */,
 				8A09179B2C7227190030AC06 /* UserStatUIView.swift in Sources */,
 				8A0917952C721B3A0030AC06 /* ReelsUIView.swift in Sources */,
+				8ADC8A1D2C9233DB00093506 /* StorageManager.swift in Sources */,
 				8A2196C22C7248A9001B4236 /* StoryCellUIView.swift in Sources */,
 				8A09178C2C7219200030AC06 /* HomeUIView.swift in Sources */,
 				8A19BDDD2C7B4A29007127C1 /* AuthServiceProtocol.swift in Sources */,
 				8A2196BC2C723DC7001B4236 /* PostCellUIView.swift in Sources */,
 				8A9C77D62C767747002ACC18 /* ReelCell.swift in Sources */,
+				8A6A95BC2C7FBBAD009C00EE /* StoryViewModel.swift in Sources */,
 				8A09178F2C721B040030AC06 /* SearchUIView.swift in Sources */,
 				8A0917892C7215060030AC06 /* MainTabBarView.swift in Sources */,
 				8A9C77D42C7676EF002ACC18 /* Reel.swift in Sources */,
+				8ADC8A1B2C92236E00093506 /* UploadToolBar.swift in Sources */,
 				8A9C77D92C767F40002ACC18 /* ReelItemUIView.swift in Sources */,
 				8A28945A2C7B6269009B271D /* DatabaseConstants.swift in Sources */,
 				8A2894542C7B5071009B271D /* RegisterViewModel.swift in Sources */,
+				8ADC8A192C921F6900093506 /* StoriesUIView.swift in Sources */,
 				8A5D6AC52C77B25D00D6966D /* LoginUIView.swift in Sources */,
 				8A9D69632C72A23200704814 /* UploadViewModel.swift in Sources */,
 				8A5D6AD02C77C31700D6966D /* CreateUsernameUIView.swift in Sources */,
 				8A0917522C720E020030AC06 /* InstagramCloneApp.swift in Sources */,
+				8A6A95BA2C7FB51F009C00EE /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

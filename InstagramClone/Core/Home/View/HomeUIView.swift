@@ -1,14 +1,20 @@
 import SwiftUI
 
 struct HomeUIView: View {
+    @StateObject var viewModel: HomeViewModel = .init()
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
                 // Stories Section
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(spacing: 8) {
-                        ForEach(0...10, id: \.self) { _ in
-                            StoryCellUIView()
+                        if (viewModel.user?.id) != nil {
+                            StoryCellUIView(story: nil, view: StoriesUploadUIView())
+                        }
+
+                        ForEach(viewModel.stories ?? [], id: \.self) { story in
+                            StoryCellUIView(story: story, view: StoriesUIView())
                         }
                     }
                 }
@@ -18,8 +24,8 @@ struct HomeUIView: View {
                 // Posts Section
                 ScrollView {
                     LazyVStack(spacing: 8) {
-                        ForEach(0...10, id: \.self) { _ in
-                            PostCellUIView()
+                        ForEach(viewModel.posts ?? [], id: \.self) { post in
+                            PostCellUIView(post: post)
                         }
                     }
                 }
@@ -43,8 +49,8 @@ struct HomeUIView: View {
                         }
                     }
                 }
-                
-                ToolbarItem(placement: .topBarLeading){
+
+                ToolbarItem(placement: .topBarLeading) {
                     Image("instagramLogo")
                         .resizable()
                         .scaledToFill()

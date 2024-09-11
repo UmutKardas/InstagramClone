@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct AppUser: Identifiable, Encodable, Decodable {
+struct AppUser: Identifiable, Encodable, Decodable, Hashable {
     var id: String
     var username: String
     var email: String
-    var profilePictureUrl: String
+    var profilePictureData: String
     var fullname: String
     var biography: String
 
@@ -19,7 +19,7 @@ struct AppUser: Identifiable, Encodable, Decodable {
         self.id = id
         self.username = username
         self.email = email
-        self.profilePictureUrl = ""
+        self.profilePictureData = ""
         self.fullname = ""
         self.biography = ""
     }
