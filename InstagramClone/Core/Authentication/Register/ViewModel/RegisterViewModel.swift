@@ -35,7 +35,7 @@ final class RegisterViewModel: ObservableObject {
 
     func saveUser() async {
         do {
-            try await DatabaseManager.shared.collectionUsers(add: Auth.auth().currentUser!.uid, email: email, username: username)
+            try await DatabaseManager.shared.addUser(add: Auth.auth().currentUser!.uid, email: email, username: username)
         } catch {
             self.error = "An unexpected error occurred. Please try again."
         }

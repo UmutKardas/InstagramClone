@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PostCellUIView: View {
     var post: Post?
-    var viewModel: PostViewModel = .init()
+    @StateObject var viewModel: PostViewModel = .init()
 
     var body: some View {
         VStack {
@@ -42,7 +42,7 @@ struct PostCellUIView: View {
                 image
                     .resizable()
                     .frame(height: 400)
-                    .scaledToFill()
+                    .scaledToFit()
                     .clipShape(Rectangle())
 
             } placeholder: {
@@ -57,7 +57,7 @@ struct PostCellUIView: View {
                 PostActionUIView(imageName: "heart", value: viewModel.posts?.likes.count ?? 0) {
                     print("Clicked Like")
                 }
-                PostActionUIView(imageName: "bubble.right", value: viewModel.posts?.caption.count ?? 0) {
+                PostActionUIView(imageName: "bubble.right", value: viewModel.posts?.comments.count ?? 0) {
                     print("Clicked Comment")
                 }
                 PostActionUIView(imageName: "paperplane", value: viewModel.posts?.shares.count ?? 0) {

@@ -34,13 +34,12 @@ struct UploadUIView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
                 UploadToolBar {
-                    viewModel.resetViewModel()
-                    caption = ""
-                    selectionIndex = 0
+                    dismiss()
                 } uploadAction: {
                     Task {
                         await viewModel.uploadPost(caption: caption)
                     }
+                    dismiss()
                 }
 
             })
@@ -49,6 +48,12 @@ struct UploadUIView: View {
             }
             .photosPicker(isPresented: $isPresented, selection: $viewModel.selectedItem)
         }
+    }
+
+    private func dismiss() {
+        viewModel.resetViewModel()
+        caption = ""
+        selectionIndex = 0
     }
 }
 

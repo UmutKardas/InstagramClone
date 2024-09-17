@@ -9,6 +9,7 @@ import FirebaseAuth
 import Foundation
 
 final class StoryViewModel: ObservableObject {
+    
     @Published var story: Story? {
         didSet {
             Task {
@@ -21,7 +22,9 @@ final class StoryViewModel: ObservableObject {
 
     func fetchUser() async {
         guard let id = story?.userId ?? Auth.auth().currentUser?.uid else { return }
-
-        user = try? await DatabaseManager.shared.collectionsUsers(get: id)
+        let fetchUser = try? await DatabaseManager.shared.getUser(get: id)
+        DispatchQueue.main.async {
+            self.user = fetchUser
+        }
     }
 }

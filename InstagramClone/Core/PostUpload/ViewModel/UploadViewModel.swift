@@ -41,7 +41,7 @@ class UploadViewModel: ObservableObject {
         )
         
         do {
-            try await DatabaseManager.shared.collectionsPost(upload: post)
+            try await DatabaseManager.shared.uploadPost(post: post)
         } catch {
             print("Error uploading post: \(error.localizedDescription)")
         }

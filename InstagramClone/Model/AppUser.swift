@@ -14,6 +14,8 @@ struct AppUser: Identifiable, Encodable, Decodable, Hashable {
     var profilePictureData: String
     var fullname: String
     var biography: String
+    var followers: [String] = []
+    var following: [String] = []
 
     init(id: String, username: String, email: String) {
         self.id = id
@@ -22,5 +24,7 @@ struct AppUser: Identifiable, Encodable, Decodable, Hashable {
         self.profilePictureData = ""
         self.fullname = ""
         self.biography = ""
+        self.followers = []
+        self.following = []
     }
 }

@@ -5,6 +5,7 @@
 //  Created by Hüseyin Umut Kardaş on 18.08.2024.
 //
 
+import FirebaseAuth
 import SwiftUI
 
 struct MainTabBarView: View {
@@ -24,7 +25,7 @@ struct MainTabBarView: View {
             ReelsUIView()
                 .tabItem { Image(systemName: "play.square") }
                 .tag(3)
-            ProfileUIView()
+            ProfileUIView(userId: Auth.auth().currentUser?.uid ?? "")
                 .tabItem { Image(systemName: "person") }
                 .tag(4)
         }
