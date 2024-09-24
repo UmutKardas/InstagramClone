@@ -6,6 +6,8 @@ This project is an attempt to clone Instagram's UI using SwiftUI, following the 
 
 - **MVVM (Model-View-ViewModel)**: The application is structured using the MVVM pattern to separate concerns and promote a clean architecture.
 - **Firebase**: Integrated for authentication (login and registration) and data storage.
+- **Async/Await**: Utilized Swift's modern concurrency features to handle asynchronous operations, such as network requests and Firebase interactions, making the code cleaner and more readable.
+- **Task Management**: Implemented `Task` and `async` functions to manage asynchronous tasks and data fetching efficiently.
 
 ## Implemented Screens
 
