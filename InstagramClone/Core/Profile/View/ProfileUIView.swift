@@ -100,9 +100,11 @@ struct ProfileUIView: View {
             Task {
                 if !userId.isEmpty {
                     await viewModel.fetchUser(id: self.userId)
+                    DispatchQueue.main.async {
+                        updateProfileButtonTitle()
+                    }
                 }
             }
-            updateProfileButtonTitle()
         }
     }
 

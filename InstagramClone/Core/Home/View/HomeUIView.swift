@@ -8,18 +8,18 @@ struct HomeUIView: View {
             VStack(spacing: 20) {
                 // Stories Section
                 ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 8) {
+                    LazyHStack(spacing: 10) {
                         if (viewModel.user?.id) != nil {
                             StoryCellUIView(story: nil, view: StoriesUploadUIView())
                         }
 
-                        ForEach(viewModel.stories ?? [], id: \.self) { story in
-                            StoryCellUIView(story: story, view: StoriesUIView())
+                        ForEach(viewModel.stories?.filter { $0.userId != viewModel.user?.id } ?? [], id: \.self) { story in
+                            StoryCellUIView(story: story, view: StoriesUIView(story: story))
                         }
                     }
                 }
                 .padding(.horizontal, 3)
-                .frame(height: 100)
+                .frame(height: 120)
 
                 // Posts Section
                 ScrollView {

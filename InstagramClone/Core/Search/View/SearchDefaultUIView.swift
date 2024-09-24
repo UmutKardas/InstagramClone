@@ -5,9 +5,12 @@
 //  Created by Hüseyin Umut Kardaş on 18.08.2024.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct SearchDefaultUIView: View {
+    @ObservedObject var viewModel: SearchViewModel
+
     let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
@@ -16,14 +19,23 @@ struct SearchDefaultUIView: View {
 
     var body: some View {
         LazyVGrid(columns: gridItems, spacing: 1, content: {
-            ForEach(0 ... 20, id: \.self) { _ in
-                Color.gray
-                    .scaledToFill()
+            ForEach(viewModel.timeLinePosts ?? []) { post in
+                WebImage(url: URL(string: post.imageData)) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: UIScreen.main.bounds.width / 3 - 2, height: UIScreen.main.bounds.width / 3 - 2)
+                        .clipped()
+                } placeholder: {
+                    Color(.gray)
+                        .frame(width: UIScreen.main.bounds.width / 3 - 2, height: UIScreen.main.bounds.width / 3 - 2)
+                        .scaledToFill()
+                }
             }
         })
     }
 }
 
 #Preview {
-    SearchDefaultUIView()
+    SearchDefaultUIView(viewModel: SearchViewModel())
 }

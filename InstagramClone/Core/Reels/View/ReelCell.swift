@@ -6,11 +6,13 @@
 //
 
 import AVKit
+import SDWebImageSwiftUI
 import SwiftUI
 
 struct ReelCell: View {
     @State private var player: AVPlayer? = nil
 
+    @ObservedObject var viewModel: ReelsViewModel
     let videoURL: URL
 
     var body: some View {
@@ -30,11 +32,19 @@ struct ReelCell: View {
             HStack(alignment: .bottom, spacing: 10) {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
-                        Color.gray
-                            .frame(width: 30, height: 30)
-                            .clipShape(Circle())
+                        WebImage(url: URL(string: viewModel.user?.profilePictureData ?? "")) { image in
+                            image
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .clipShape(Circle())
+                                .scaledToFill()
+                        } placeholder: {
+                            Color.gray
+                                .frame(width: 30, height: 30)
+                                .clipShape(Circle())
+                        }
 
-                        Text("umtkardas")
+                        Text(viewModel.user?.username ?? "User")
                             .foregroundColor(.white)
                             .font(.footnote)
 
@@ -60,9 +70,9 @@ struct ReelCell: View {
                 Spacer()
 
                 VStack(alignment: .trailing, spacing: 15) {
-                    ReelItemUIView(imageName: "heart", text: "50.6K")
-                    ReelItemUIView(imageName: "message", text: "212")
-                    ReelItemUIView(imageName: "paperplane", text: "66.8K")
+                    ReelItemUIView(imageName: "heart", text: "3")
+                    ReelItemUIView(imageName: "message", text: "5")
+                    ReelItemUIView(imageName: "paperplane", text: "1")
                     Image(systemName: "ellipsis")
                         .foregroundColor(.white)
                         .imageScale(.large)
@@ -76,5 +86,5 @@ struct ReelCell: View {
 }
 
 #Preview {
-    ReelCell(videoURL: Reel.MOCK_REELS.first!.videoURL)
+    ReelCell(viewModel: ReelsViewModel(), videoURL: Reel.MOCK_REELS.first!.videoURL)
 }

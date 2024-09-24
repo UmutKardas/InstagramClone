@@ -44,10 +44,13 @@ final class ProfileViewModel: ObservableObject {
     }
 
     func toggleFollowStatus() async {
-        guard let user = user, let currentId = Auth.auth().currentUser?.uid else { return }
+        guard let user = user, let currentId = Auth.auth().currentUser?.uid, let currentUser = try? await DatabaseManager.shared.getUser(get: currentId) else { return }
         do {
             let updateFields = ["followers": isCurrentUserFollowing() ? user.followers.filter { $0 != currentId } : user.followers + [currentId]]
+            let updateMyFields = ["following": isCurrentUserFollowing() ? currentUser.following.filter { $0 != user.id } : currentUser.following + [user.id]]
             try await DatabaseManager.shared.updateUser(id: user.id, updateFields: updateFields)
+            try await DatabaseManager.shared.updateUser(id: currentId, updateFields: updateMyFields)
+            await fetchUser(id: user.id)
         } catch {
             print("Failed to follow user \(error.localizedDescription) ")
         }

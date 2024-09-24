@@ -8,18 +8,25 @@
 import SwiftUI
 
 struct SearchUIView: View {
-    @State var searchText: String = ""
+    @StateObject var viewModel: SearchViewModel = .init()
 
     var body: some View {
         NavigationStack {
             ScrollView {
-                if searchText.isEmpty {
-                    SearchDefaultUIView()
+                if viewModel.textField.isEmpty {
+                    SearchDefaultUIView(viewModel: viewModel)
                 }
                 else {
-                    SearchResultUIView()
+                    SearchResultUIView(viewModel: viewModel)
                 }
-            }.searchable(text: $searchText, prompt: "Search")
+            }.searchable(text: $viewModel.textField, prompt: "Search")
+                .onChange(of: viewModel.textField) { _, _ in
+                    Task {
+                        await viewModel.searchUsers()
+                    }
+                }
+                .autocorrectionDisabled(true)
+                .autocapitalization(.none)
         }
     }
 }

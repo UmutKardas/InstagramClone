@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ReelsUIView: View {
+    @StateObject var viewModel: ReelsViewModel = .init()
+
     var body: some View {
         GeometryReader { geometry in
             TabView {
                 ForEach(Reel.MOCK_REELS) { reel in
-                    ReelCell(videoURL: reel.videoURL)
+                    ReelCell(viewModel: viewModel, videoURL: reel.videoURL)
                         .frame(width: geometry.size.width)
                         .rotationEffect(.init(degrees: -90))
-                        .ignoresSafeArea(.all, edges: .top)
+                        .ignoresSafeArea(.all, edges: .horizontal)
                 }
             }
             .rotationEffect(.init(degrees: 90))
@@ -23,11 +25,10 @@ struct ReelsUIView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(width: geometry.size.width)
             .background(.black)
-           
+
             Spacer()
         }
-        .ignoresSafeArea(.all, edges: .top)
-        .edgesIgnoringSafeArea(.leading)
+        .ignoresSafeArea(.all, edges: .horizontal)
     }
 }
 
