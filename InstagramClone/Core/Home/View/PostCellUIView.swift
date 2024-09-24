@@ -68,17 +68,11 @@ struct PostCellUIView: View {
             .padding(.leading, 8)
 
             // Username - Description
-            HStack {
-                Text(viewModel.user?.username ?? "User")
-                    .fontWeight(.semibold)
-                    .font(.headline)
-                Text(viewModel.posts?.caption ?? "Description")
-                    .font(.body)
-            }
-            .font(.footnote)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading, 8)
-            .padding(.vertical, 1)
+            Text(createAttributedText())
+                .font(.footnote)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 8)
+                .padding(.vertical, 1)
 
             // Date
             Text(viewModel.posts?.createdDate.formattedDate() ?? "5h ago")
@@ -91,6 +85,25 @@ struct PostCellUIView: View {
         .onAppear {
             viewModel.posts = self.post
         }
+    }
+
+    private func createAttributedText() -> AttributedString {
+        var attributedString = AttributedString()
+
+        let username = viewModel.user?.username ?? "User"
+        var usernameAttr = AttributedString(username)
+        usernameAttr.font = .system(size: UIFont.preferredFont(forTextStyle: .footnote).pointSize, weight: .semibold)
+        attributedString.append(usernameAttr)
+
+        let spaceAttr = AttributedString(" ")
+        attributedString.append(spaceAttr)
+
+        let caption = viewModel.posts?.caption ?? "Description"
+        var captionAttr = AttributedString(caption)
+        captionAttr.font = .footnote
+        attributedString.append(captionAttr)
+
+        return attributedString
     }
 }
 

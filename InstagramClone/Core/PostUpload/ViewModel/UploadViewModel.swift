@@ -14,6 +14,8 @@ import SwiftUI
 class UploadViewModel: ObservableObject {
     @Published var image: Image?
     @Published var imageData: Data?
+    @Published var caption: String = ""
+    @Published var isPresented: Bool = false
     @Published var selectedItem: PhotosPickerItem? {
         didSet { Task { await loadItem(from: selectedItem) } }
     }
@@ -26,7 +28,7 @@ class UploadViewModel: ObservableObject {
         image = Image(uiImage: uiImage)
     }
     
-    func uploadPost(caption: String) async {
+    func uploadPost() async {
         guard let data = await getUploadImage(), let userId = Auth.auth().currentUser?.uid else { return }
         
         let post = Post(

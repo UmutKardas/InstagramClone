@@ -9,8 +9,6 @@ import PhotosUI
 import SwiftUI
 
 struct UploadUIView: View {
-    @State var caption: String = ""
-    @State var isPresented: Bool = false
     @Binding var selectionIndex: Int
     @StateObject var viewModel: UploadViewModel = .init()
 
@@ -23,10 +21,10 @@ struct UploadUIView: View {
                     .frame(width: 100, height: 100)
                     .clipShape(Rectangle())
                     .onTapGesture {
-                        isPresented.toggle()
+                        viewModel.isPresented.toggle()
                     }
 
-                TextField("Enter your caption...", text: $caption, axis: .vertical)
+                TextField("Enter your caption...", text: $viewModel.caption, axis: .vertical)
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.leading, 10)
@@ -37,22 +35,22 @@ struct UploadUIView: View {
                     dismiss()
                 } uploadAction: {
                     Task {
-                        await viewModel.uploadPost(caption: caption)
+                        await viewModel.uploadPost()
                     }
                     dismiss()
                 }
 
             })
             .onAppear {
-                isPresented.toggle()
+                viewModel.isPresented.toggle()
             }
-            .photosPicker(isPresented: $isPresented, selection: $viewModel.selectedItem)
+            .photosPicker(isPresented: $viewModel.isPresented, selection: $viewModel.selectedItem)
         }
     }
 
     private func dismiss() {
         viewModel.resetViewModel()
-        caption = ""
+        viewModel.caption = ""
         selectionIndex = 0
     }
 }
